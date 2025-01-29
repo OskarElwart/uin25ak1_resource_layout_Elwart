@@ -1,0 +1,25 @@
+nav {
+    width: 100%;
+    background-color: var(--red);
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+        a {
+            text-transform: uppercase;
+            color: var(--white);
+            padding: calc(0.5rem + 4px) 1rem;
+            display: inline-block;
+            text-decoration: none;
+            border-bottom: 4px solid var(--red);
+        }
+        a:hover {
+            background: var(--yellow);
+            color: var(--black);
+            border-bottom: 4px solid var(--black);
+        }
+    }
+}
