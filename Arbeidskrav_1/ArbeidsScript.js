@@ -1,11 +1,11 @@
 console.log(resources)
 let resoruceHTML = ""
 let linkPage = "HTML"
-document.getElementById("HTMLlink").addEventListener("click", function(){UpdateLinkHTML(), UpdateMap()})
-document.getElementById("CSSlink").addEventListener("click", function(){UpdateLinkCSS(), UpdateMap()})
-document.getElementById("JSlink").addEventListener("click", function(){UpdateLinkJS(), UpdateMap()})
-document.getElementById("Reactlink").addEventListener("click", function(){UpdateLinkReact(), UpdateMap()})
-document.getElementById("Sanitylink").addEventListener("click", function(){UpdateLinkSanity(), UpdateMap()})
+document.getElementById("HTMLlink").addEventListener("click", function(){ResetClass(), UpdateLinkHTML(), UpdateMap()})
+document.getElementById("CSSlink").addEventListener("click", function(){ResetClass(), UpdateLinkCSS(), UpdateMap()})
+document.getElementById("JSlink").addEventListener("click", function(){ResetClass(), UpdateLinkJS(), UpdateMap()})
+document.getElementById("Reactlink").addEventListener("click", function(){ResetClass(), UpdateLinkReact(), UpdateMap()})
+document.getElementById("Sanitylink").addEventListener("click", function(){ResetClass(), UpdateLinkSanity(), UpdateMap()})
 const catge = resources.filter(
     (element) => element.category  === linkPage
   )
@@ -23,22 +23,40 @@ catge.map((resource, index) => { resoruceHTML +=
                 </ul>
             </article>`
         })
-
+function ResetClass(){
+            document.getElementById("HTMLlink").className = "ButtonInactive"
+            document.getElementById("CSSlink").className = "ButtonInactive"
+            document.getElementById("JSlink").className = "ButtonInactive"
+            document.getElementById("Reactlink").className = "ButtonInactive"
+            document.getElementById("Sanitylink").className = "ButtonInactive"
+}
 function UpdateLinkHTML(){
     linkPage = "HTML"
+    document.getElementById("HTMLlink").className = "ButtonActive"
+
 }
 function UpdateLinkCSS(){
     linkPage = "CSS"
+    document.getElementById("CSSlink").className = "ButtonActive"
 }
 function UpdateLinkJS(){
     linkPage = "JavaScript"
+    document.getElementById("JSlink").className = "ButtonActive"
+
 }
 function UpdateLinkReact(){
     linkPage = "React"
+    document.getElementById("Reactlink").className = "ButtonActive"
+
 }
 function UpdateLinkSanity(){
     linkPage = "Sanity and headless CMS"
+    document.getElementById("Sanitylink").className = "ButtonActive"
+
 }
+
+
+
 function UpdateMap (){
     resoruceHTML = ""
     const catge = resources.filter(
