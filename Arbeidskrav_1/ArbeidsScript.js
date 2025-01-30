@@ -9,7 +9,7 @@ document.getElementById("Sanitylink").addEventListener("click", function () { Re
 const catge = resources.filter(
     (element) => element.category === linkPage
 )
-//Brukte ChatGPT for linja 21, 22. Klarte ikke å finne en bra måte får å bruke en nested array. 
+//Brukte ChatGPT for linja 22, 23. Klarte ikke å finne en bra måte får å bruke en nested array. 
 //prompten var "how can i map() an array inside an array in javascript" med resources.map og arrayen pastet inn.
 //den lå til også target="_blank" for å åpne lenken i ny fane og .join(" ") for å ta bort komma fra html
 //som er ting jeg ikke ville ha funnet ut på egen hånd
